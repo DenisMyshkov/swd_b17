@@ -14,7 +14,7 @@ def driver(request):
 
 def test_for_lection_4_task_2(driver):
     driver.get("http://localhost/litecart/")
-    products_list = driver.find_elements_by_css_selector(".image-wrapper")
+    products_list = driver.find_elements_by_css_selector(".product")
     for product in products_list:
         element = product.find_elements_by_css_selector("[class*=sticker]")
         assert len(element) == 1
