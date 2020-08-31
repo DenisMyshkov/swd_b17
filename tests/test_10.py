@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 @pytest.fixture
 def driver(request):
-    wd = webdriver.Chrome(desired_capabilities={'loggingPrefs': {'performance': 'ALL'}})
+    wd = webdriver.Chrome(desired_capabilities={'loggingPrefs': {'browser': 'ALL'}})
     wd.implicitly_wait(10)
     request.addfinalizer(wd.quit)
     return wd
